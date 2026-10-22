@@ -27,7 +27,28 @@ window-rule {
 }
 
 window-rule {
+  match app-id=r#"VirtualBox Manager"#
+  default-column-width { fixed 1000; }
+  default-window-height { fixed 600; }
+  open-floating true
+}
+
+window-rule {
+  match title=r#"Citation Dialog"#
+  default-column-width { fixed 600; }
+  default-window-height { fixed 100; }
+  open-floating true
+}
+
+window-rule {
     match title=r#"Load a new file"#
+    default-column-width { fixed 700; }
+    default-window-height { fixed 500; }
+    open-floating true
+}
+
+window-rule {
+    match title=r#"^Ghidra:"#
     default-column-width { fixed 700; }
     default-window-height { fixed 500; }
     open-floating true

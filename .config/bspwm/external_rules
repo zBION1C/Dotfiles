@@ -1,0 +1,13 @@
+#!/bin/sh
+wid=$1
+class=$2
+instance=$3
+
+if [ "$class" = "jadx-gui-JadxGUI" ]; then
+    title=$(xprop -id "$wid" _NET_WM_NAME | sed -n 's/.*= "\(.*\)"$/\1/p')
+    case "$title" in
+        "Text search"*|"Usage search"*|"Find"*)
+            echo "state=floating rectangle=1600x900+0+0 center=on"
+            ;;
+    esac
+fi
